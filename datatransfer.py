@@ -4,13 +4,15 @@ import urllib
 import requests
 import auth
 import constants as c
-from leagues import League
+import json
+from data.leagues import League
 
 class DataTransfer(object):
     """Handles data transfers between PoE servers and the API,
     like characters and items"""
 
     def __init__(self, session_id):
+        """Sets up a sessions and loads all current leagues."""
         self.auth = auth.Auth(session_id)
         self.session = requests.Session()
         self.leagues = self.get_leagues()
@@ -31,9 +33,10 @@ class DataTransfer(object):
 
         league_list = []
 
-        leagues = send_get(c.LEAGUES_URL)
+        leagues = self.send_get(c.LEAGUES_URL)
 
-        for league in leagues:
+
+        for league in leagues.json():
             league_list.append(League(league))
 
         return league_list

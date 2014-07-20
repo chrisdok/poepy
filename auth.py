@@ -8,7 +8,7 @@ class Auth(object):
         self.session = session_id
         self.email = 0
         self.password = 0
-        self.cookie = {'PHPSESSID': session}
+        self.cookie = {'PHPSESSID': self.session}
 
     def get_cookies(self):
         """Returns cookie including current PHPSESSID"""
