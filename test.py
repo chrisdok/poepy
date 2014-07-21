@@ -4,6 +4,9 @@ import datatransfer
 
 def main():
     """Main function"""
-    data_transfer = datatransfer.DataTransfer("--- YOUR SESSIONID HERE ---")
+    data_transfer = datatransfer.DataTransfer(
+        " --- YOUR SESSIONID HERE --- ")
+
 
 main()
+

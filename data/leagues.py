@@ -10,3 +10,11 @@ class League(object):
         self.start = league['registerAt']
         self.end = league['endAt']
 
+    def update_items(self, items):
+        """Saves all items in the stashtab of current league"""
+        if items is not False:
+            tabs = items['numTabs']
+            for item in items['items']:
+                pass
+
+

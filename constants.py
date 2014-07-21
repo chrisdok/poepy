@@ -1,12 +1,14 @@
 """Constant variables"""
 
-"""Urls"""
+"""URLs"""
 CHARACTER_URL = "http://www.pathofexile.com/character-window/get-characters"
 ITEM_URL = "http://www.pathofexile.com/character-window/get-items?character="
-STASH_URL = "http://www.pathofexile.com/character-window\
-    /get-stash-items?league="
-PASSIVES_URL = "http://www.pathofexile.com/character-window\
-    /get-passive-skills?reqData=false&character="
+STASH_URL = ("http://www.pathofexile.com/character-window"
+    "/get-stash-items?league="
+)
+PASSIVES_URL = ("http://www.pathofexile.com/character-window"
+    "/get-passive-skills?reqData=false&character="
+)
 LEAGUES_URL = "http://api.pathofexile.com/leagues"
 
 
